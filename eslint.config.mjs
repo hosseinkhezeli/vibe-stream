@@ -1,18 +1,36 @@
+// eslint.config.js
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
+import prettier from "eslint-config-prettier";
+import tsPlugin from "@typescript-eslint/eslint-plugin";
 
-const eslintConfig = defineConfig([
+export default defineConfig([
   ...nextVitals,
   ...nextTs,
-  // Override default ignores of eslint-config-next.
+
+  // Apply Prettier compatibility and TypeScript plugin
+  {
+    plugins: {
+      "@typescript-eslint": tsPlugin
+    },
+    rules: {
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        { argsIgnorePattern: "^_", varsIgnorePattern: "^_" }
+      ],
+      "react-refresh/only-export-components": "warn"
+    }
+  },
+
+  // Optional global ignores
   globalIgnores([
-    // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
     "build/**",
-    "next-env.d.ts",
+    "next-env.d.ts"
   ]),
-]);
 
-export default eslintConfig;
+  // Apply Prettier last to disable conflicting formatting rules
+  prettier
+]);

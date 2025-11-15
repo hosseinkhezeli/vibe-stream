@@ -1,0 +1,30 @@
+{
+  "videoDetails": {
+    "videoNotFound": "The requested video was not found",
+    "errorLoading": "Error loading video",
+    "videoDetailsPage": "Video Details Page",
+    "videoPlayer": "Video Player",
+    "videoStatistics": "Video Statistics",
+    "published": "Published",
+    "expandDescription": "Show more description",
+    "collapseDescription": "Show less description",
+    "profileImage": "Profile Image",
+    "publishedBy": "Published by",
+    "videoActions": "Video Actions",
+    "likeVideo": "Like Video",
+    "unlikeVideo": "Unlike Video",
+    "addComment": "Add Comment",
+    "shareVideo": "Share Video",
+    "removeFromBookmarks": "Remove from Bookmarks",
+    "addToBookmarks": "Add to Bookmarks",
+    "downloadVideo": "Download Video",
+    "reportVideo": "Report Video",
+    "descriptionAndStatistics": "Video Description and Statistics",
+    "noDescription": "No description available for this video",
+    "viewCount": "{count} views",
+    "videoDescription": "Video Description",
+    "noTitle": "No Title",
+    "videoActionsAndInfo": "Video Information and Actions",
+    "subscribersCount": "{count} YouTube channel subscribers"
+  }
+}

@@ -1,0 +1,57 @@
+/* app/globals.css */
+
+/* 1) Import Tailwind v4 */
+@import "tailwindcss";
+
+/* 2) Define our design tokens using @theme */
+@theme {
+  /* Colors (Spotify-ish dark theme) */
+  --color-bg: #000000;
+  --color-bg-elevated: #121212;
+  --color-muted: #b3b3b3;
+  --color-accent: #1db954;       /* Spotify green */
+  --color-accent-hover: #1ed760;
+
+  /* Typography */
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont,
+    "Inter", sans-serif;
+
+  /* Spacing scale (used by p-*, m-*, gap-*, etc.) */
+  --spacing-1: 0.25rem;  /* 4px  */
+  --spacing-2: 0.5rem;   /* 8px  */
+  --spacing-3: 0.75rem;  /* 12px */
+  --spacing-4: 1rem;     /* 16px */
+  --spacing-6: 1.5rem;   /* 24px */
+  --spacing-8: 2rem;     /* 32px */
+
+  /* Radii (rounded-*) */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+
+  /* Shadows (shadow-*) */
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-card: 0 16px 40px rgba(0, 0, 0, 0.5);
+
+  /* Container width (max-w-app) */
+  --container-app: 80rem;
+}
+
+/* 3) Base styles using the tokens */
+html {
+  color-scheme: dark;
+}
+
+html[dir="rtl"] {
+  direction: rtl;
+}
+html[dir="ltr"] {
+  direction: ltr;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: white;
+}

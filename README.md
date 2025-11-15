@@ -1,36 +1,149 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Music Streaming App
+
+A beautiful, Spotify-inspired music streaming PWA built with React, TypeScript, and Tailwind CSS.
+
+## Features
+
+- 🎵 **Full Music Player** - Play, pause, skip, shuffle, and repeat
+- 🔍 **Smart Search** - Find tracks, albums, artists, and playlists instantly
+- 📚 **Library Management** - Save your favorite tracks, albums, and artists
+- 📱 **PWA Support** - Install on your device and use offline
+- 🎨 **Beautiful UI** - Dark theme with smooth animations
+- ⌨️ **Keyboard Shortcuts** - Control playback with your keyboard
+- 📱 **Fully Responsive** - Works perfectly on mobile, tablet, and desktop
+
+## Tech Stack
+
+- **Framework:** React 18 + TypeScript
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS v4
+- **State Management:** Zustand
+- **Routing:** React Router v6
+- **UI Components:** Radix UI primitives
+- **Icons:** Lucide React
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+ and npm
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone <your-repo-url>
+
+# Navigate to project directory
+cd <project-name>
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The app will be available at `http://localhost:8080`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── components/
+│   ├── layout/          # Sidebar, mobile nav
+│   ├── music/           # Track rows, cards
+│   ├── player/          # Player components
+│   └── ui/              # Reusable UI primitives
+├── lib/
+│   ├── api/             # API client & mock data
+│   ├── store/           # Zustand stores
+│   ├── types.ts         # TypeScript types
+│   └── utils/           # Utility functions
+├── pages/               # Route pages
+└── App.tsx              # Main app component
+```
 
-## Learn More
+## Mock API
 
-To learn more about Next.js, take a look at the following resources:
+Currently uses a mock API with sample data. To connect to a real backend:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Set `VITE_API_BASE_URL` environment variable
+2. Update API client in `src/lib/api/client.ts`
+3. Implement the same interfaces defined in `src/lib/types.ts`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### API Endpoints Expected
 
-## Deploy on Vercel
+- `GET /shelves` - Home page content
+- `GET /search?q={query}` - Search results
+- `GET /playlist/{id}` - Playlist details
+- `GET /album/{id}` - Album details
+- `GET /artist/{id}` - Artist details
+- `GET /lyrics/{trackId}` - Track lyrics
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Player
+
+- Full playback controls
+- Queue management
+- Shuffle and repeat modes
+- Volume control
+- Progress bar with seek
+- Media Session API integration (for lock screen controls)
+
+### Library
+
+- Like tracks, albums
+- Follow artists
+- Save playlists
+- Persistent storage using Zustand persist middleware
+
+### PWA
+
+The app is a Progressive Web App and can be:
+- Installed on mobile devices
+- Used offline (with cached assets)
+- Added to home screen
+
+## Keyboard Shortcuts
+
+- `Space` - Play/Pause
+- `→` - Seek forward
+- `←` - Seek backward
+- `Cmd/Ctrl + F` - Focus search
+
+## Performance
+
+- Lazy loaded routes
+- Optimized images
+- Debounced search
+- Minimal re-renders with Zustand selectors
+
+## Accessibility
+
+- WCAG 2.1 AA compliant
+- Full keyboard navigation
+- ARIA labels on all interactive elements
+- Focus management
+- High contrast support
+
+## Future Enhancements
+
+- [ ] Real API integration
+- [ ] User authentication
+- [ ] Social features (sharing, collaborative playlists)
+- [ ] Lyrics display with karaoke mode
+- [ ] Audio visualization
+- [ ] Podcast support
+- [ ] Audiobook support
+- [ ] Offline playback
+- [ ] Cross-device sync
+
+## License
+
+MIT
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.

@@ -1,0 +1,30 @@
+{
+  "videoDetails": {
+    "videoNotFound": "ویدیو مورد نظر یافت نشد",
+    "errorLoading": "خطا در بارگذاری ویدیو",
+    "videoDetailsPage": "صفحه جزئیات ویدیو",
+    "videoPlayer": "پخش کننده ویدیو",
+    "videoStatistics": "آمار ویدیو",
+    "published": "انتشار داده شده",
+    "expandDescription": "نمایش توضیحات بیشتر",
+    "collapseDescription": "بستن توضیحات بیشتر",
+    "profileImage": "تصویر پروفایل",
+    "publishedBy": "انتشار دهنده",
+    "videoActions": "اقدامات ویدیو",
+    "likeVideo": "لایک ویدیو",
+    "unlikeVideo": "لغو لایک ویدیو",
+    "addComment": "افزودن نظر",
+    "shareVideo": "اشتراک گذاری ویدیو",
+    "removeFromBookmarks": "حذف از نشان شده ها",
+    "addToBookmarks": "ذخیره در نشان شده ها",
+    "downloadVideo": "دانلود ویدیو",
+    "reportVideo": "گزارش ویدیو",
+    "descriptionAndStatistics": "توضیحات و آمار ویدیو",
+    "noDescription": "توضیحاتی برای این ویدیو وجود ندارد",
+    "viewCount": "{count} بازدید",
+    "videoDescription": "توضیحات ویدیو",
+    "noTitle": "بدون عنوان",
+    "videoActionsAndInfo": "اطلاعات ویدیو و اقدامات",
+    "subscribersCount": "{count} عضو کانال در یوتیوب"
+  }
+}
