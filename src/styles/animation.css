@@ -1,7 +1,10 @@
 @theme {
   --animate-loader-ping: loader-ping 1s infinite;
-  --animate-slide-in: slide-in 300ms ease-in-out;
+  --animate-slide-in: slide-in 200ms ease-in-out;
   --animate-appear: appear 500ms ease-in-out;
+  --animate-slide-to-left: slide-to-left 200ms ease-in-out;
+  --animate-slide-to-right: slide-to-right 200ms ease-in-out;
+
   @keyframes loader-ping {
     0%,
     80%,
@@ -12,6 +15,7 @@
       transform: scale(1);
     }
   }
+  
   @keyframes slide-in {
     0% {
       transform: translateY(-100%);
@@ -22,12 +26,35 @@
       opacity: 1;
     }
   }
+  
   @keyframes appear {
     0% {
       opacity: 0;
     }
     100% {
       opacity: 1;
+    }
+  }
+  
+  @keyframes slide-to-right {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  
+  @keyframes slide-to-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
     }
   }
 }

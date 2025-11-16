@@ -20,7 +20,7 @@ export function SidebarHeader({ onCollapseClick, collapsed }: Props) {
           size={22}
           className={clsx(
             collapsed ? "block -scale-x-100" : "group-hover:block hidden",
-            "animate-appear transition-all"
+            "animate-slide-to-right transition-all"
           )}
         />
       </button>
