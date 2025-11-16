@@ -1,0 +1,13 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "prettier.experimentalTernaries": false,
+  "prettier.insertPragma": true,
+  "prettier.requireConfig": false,
+  "prettier.requirePragma": false,
+  "vs-code-prettier-eslint.prettierLast": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

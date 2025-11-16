@@ -1,0 +1,7 @@
+@theme{
+    --color-bg: #000000;
+  --color-bg-elevated: #121212;
+  --color-muted: #b3b3b3;
+  --color-accent: #1db954;       /* Spotify green */
+  --color-accent-hover: #1ed760;
+}

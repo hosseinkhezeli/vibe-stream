@@ -1,0 +1,12 @@
+@theme {
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --container-app: 80rem;
+}
+
+@layer base {
+  * {
+    @apply scrollbar-thin 
+  }
+}

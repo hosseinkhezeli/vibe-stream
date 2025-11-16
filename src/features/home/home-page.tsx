@@ -1,5 +1,4 @@
-// features/home/home-page.tsx
-import { PlaylistRow } from "./sections/playlist-row";
+import { PlaylistRow } from "./components/playlist-row";
 
 type PlaylistLike = {
   id: string;
@@ -13,31 +12,36 @@ const recentlyPlayed: PlaylistLike[] = [
     id: "rp-1",
     title: "برای تمرکز",
     description: "آهنگ‌های ملایم برای کدنویسی",
-    imageUrl: "/images/playlists/focus.jpg",
+    imageUrl:
+      "https://cdn.audiom.ir/ava-cover/audiom/ava-thumbnail/af585bf2-2271-4ec0-9e61-4a10afc4aafb.webp?zb_dmn=apr&zb_svc=audiom-prod&zb_scm=https&zb_type=internal",
   },
   {
     id: "rp-2",
     title: "هیپ‌هاپ فارسی",
     description: "جدیدترین ترک‌های رپ فارسی",
-    imageUrl: "/images/playlists/hiphop-fa.jpg",
+    imageUrl:
+      "https://cdn.audiom.ir/ava-cover/audiom/ava-thumbnail/0c1c18fe-5a4f-4faf-b2ac-442d1ab99156.webp?zb_dmn=apr&zb_svc=audiom-prod&zb_scm=https&zb_type=internal",
   },
   {
     id: "rp-3",
     title: "چیل شبانه",
     description: "آهنگ‌های آرام برای آخر شب",
-    imageUrl: "/images/playlists/chill-night.jpg",
+    imageUrl:
+      "https://cdn.audiom.ir/ava-cover/audiom/ava-thumbnail/0cf21cfc-afe0-4b0e-b18d-24feafd72f5a.webp?zb_dmn=apr&zb_svc=audiom-prod&zb_scm=https&zb_type=internal",
   },
   {
     id: "rp-4",
     title: "پادکست‌های توسعه‌دهندگان",
     description: "گفتگو با مهندسان نرم‌افزار",
-    imageUrl: "/images/playlists/dev-podcasts.jpg",
+    imageUrl:
+      "https://cdn.audiom.ir/ava-cover/audiom/ava-thumbnail/08671957-7168-4ffe-b578-415ae78f3c68.webp?zb_dmn=apr&zb_svc=audiom-prod&zb_scm=https&zb_type=internal",
   },
   {
     id: "rp-5",
     title: "EDM برای ورزش",
     description: "انرژی بالا برای باشگاه",
-    imageUrl: "/images/playlists/edm-gym.jpg",
+    imageUrl:
+      "https://cdn.audiom.ir/ava-cover/audiom/ava-thumbnail/4e325eef-a0e9-48a0-a787-89ec2efafa8f.webp?zb_dmn=apr&zb_svc=audiom-prod&zb_scm=https&zb_type=internal",
   },
 ];
 
@@ -46,19 +50,22 @@ const madeForYou: PlaylistLike[] = [
     id: "mf-1",
     title: "دیسکاور هفتگی",
     description: "بر اساس سلیقه‌ی شنیداری تو",
-    imageUrl: "/images/playlists/discover-weekly.jpg",
+    imageUrl:
+      "https://cdn.audiom.ir/ava-cover/audiom/ava-thumbnail/4e325eef-a0e9-48a0-a787-89ec2efafa8f.webp?zb_dmn=apr&zb_svc=audiom-prod&zb_scm=https&zb_type=internal",
   },
   {
     id: "mf-2",
     title: "ریمیکس‌های محبوب تو",
     description: "بر اساس ترک‌هایی که دوست داشتی",
-    imageUrl: "/images/playlists/remix.jpg",
+    imageUrl:
+      "https://cdn.audiom.ir/ava-cover/audiom/ava-thumbnail/08671957-7168-4ffe-b578-415ae78f3c68.webp?zb_dmn=apr&zb_svc=audiom-prod&zb_scm=https&zb_type=internal",
   },
   {
     id: "mf-3",
     title: "لیست تمرکز اختصاصی",
     description: "ترک‌های بی‌کلام برای تمرکز",
-    imageUrl: "/images/playlists/focus-custom.jpg",
+    imageUrl:
+      "https://cdn.audiom.ir/ava-cover/audiom/ava-thumbnail/0cf21cfc-afe0-4b0e-b18d-24feafd72f5a.webp?zb_dmn=apr&zb_svc=audiom-prod&zb_scm=https&zb_type=internal",
   },
 ];
 
@@ -67,25 +74,29 @@ const popularPlaylists: PlaylistLike[] = [
     id: "pp-1",
     title: "تاپ جهانی امروز",
     description: "داغ‌ترین ترک‌ها در دنیا",
-    imageUrl: "/images/playlists/top-global.jpg",
+    imageUrl:
+      "https://cdn.audiom.ir/ava-cover/audiom/ava-thumbnail/af585bf2-2271-4ec0-9e61-4a10afc4aafb.webp?zb_dmn=apr&zb_svc=audiom-prod&zb_scm=https&zb_type=internal",
   },
   {
     id: "pp-2",
     title: "تاپ ایران امروز",
     description: "محبوب‌ترین آهنگ‌ها در ایران",
-    imageUrl: "/images/playlists/top-iran.jpg",
+    imageUrl:
+      "https://cdn.audiom.ir/ava-cover/audiom/ava-thumbnail/0cf21cfc-afe0-4b0e-b18d-24feafd72f5a.webp?zb_dmn=apr&zb_svc=audiom-prod&zb_scm=https&zb_type=internal",
   },
   {
     id: "pp-3",
     title: "کلاسیک‌های جاودانه",
     description: "آهنگ‌های ماندگار نسل‌ها",
-    imageUrl: "/images/playlists/classics.jpg",
+    imageUrl:
+      "https://cdn.audiom.ir/ava-cover/audiom/ava-thumbnail/08671957-7168-4ffe-b578-415ae78f3c68.webp?zb_dmn=apr&zb_svc=audiom-prod&zb_scm=https&zb_type=internal",
   },
   {
     id: "pp-4",
     title: "لوفی برای مطالعه",
     description: "لوفی بیت برای تمرکز و مطالعه",
-    imageUrl: "/images/playlists/lofi.jpg",
+    imageUrl:
+      "https://cdn.audiom.ir/ava-cover/audiom/ava-thumbnail/0c1c18fe-5a4f-4faf-b2ac-442d1ab99156.webp?zb_dmn=apr&zb_svc=audiom-prod&zb_scm=https&zb_type=internal",
   },
 ];
 

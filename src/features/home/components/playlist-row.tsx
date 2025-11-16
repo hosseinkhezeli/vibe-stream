@@ -1,4 +1,3 @@
-// features/home/sections/playlist-row.tsx
 import Image from "next/image";
 
 type PlaylistLike = {

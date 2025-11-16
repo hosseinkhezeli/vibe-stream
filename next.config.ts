@@ -7,7 +7,18 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: false
   },
   images: {
-    formats: ["image/avif", "image/webp"]
+    formats: ["image/avif", "image/webp"],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
+        localPatterns: [
+      {
+       pathname:'**'
+      },
+    ],
   }
 };
 

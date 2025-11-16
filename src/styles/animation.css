@@ -1,0 +1,33 @@
+@theme {
+  --animate-loader-ping: loader-ping 1s infinite;
+  --animate-slide-in: slide-in 300ms ease-in-out;
+  --animate-appear: appear 500ms ease-in-out;
+  @keyframes loader-ping {
+    0%,
+    80%,
+    100% {
+      transform: scale(0);
+    }
+    40% {
+      transform: scale(1);
+    }
+  }
+  @keyframes slide-in {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

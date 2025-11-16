@@ -1,9 +1,10 @@
 import { Home, Search, Library as LibraryIcon } from "lucide-react";
+import { ComponentType } from "react";
 
 export type NavItem = {
   label: string;
   href: string;
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+  icon: ComponentType<{ size?: number; className?: string }>;
 };
 
 export const primaryNav: NavItem[] = [
