@@ -1,8 +1,8 @@
 "use client";
 
+import { Avatar } from "@/core/ui/avatar/avatar";
 import clsx from "clsx";
 import { MenuIcon } from "lucide-react";
-import { useRouter } from "next/navigation";
 import { useQueryState } from "nuqs";
 
 export function Header() {
@@ -18,7 +18,7 @@ export function Header() {
           <span className="text-sm text-muted">VIDE</span>
         </div>
         <button onClick={handleOpenSettings} className="md:hidden">
-          <MenuIcon size={24} className={clsx("shrink-0", "text-muted")} />
+          <Avatar />
         </button>
       </div>
     </header>

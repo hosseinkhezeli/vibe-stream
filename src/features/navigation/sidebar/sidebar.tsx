@@ -1,16 +1,16 @@
 import { clsx } from "clsx";
 import { SidebarContent } from "./components/sidebar-content";
-import { SettingModal } from "../setting-modal/setting-modal";
+import { SettingDrawer } from "../../setting/setting-drawer/setting-drawer";
 
 export function Sidebar() {
   return (
     <>
-      <SettingModal />
+      <SettingDrawer />
       <aside
         className={clsx(
-          "w-max group sticky h-full bg-bg-elevated flex-col overflow-hidden rounded-2xl",
+          "w-max group sticky h-full bg-bg-elevated overflow-hidden rounded-2xl",
           "hidden",
-          "md:flex"
+          "md:flex flex-col"
         )}
         aria-label="Sidebar"
       >
