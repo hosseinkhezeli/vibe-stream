@@ -1,3 +1,4 @@
+import { Chip } from "@/core/ui/chip/chip";
 import { PlaylistRow } from "./components/playlist-row";
 
 type PlaylistLike = {

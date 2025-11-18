@@ -1,4 +1,5 @@
-import { Home, Search, Library as LibraryIcon, User, Settings, LogOut } from "lucide-react";
+import { APP_ROUTES } from "@/config/constants.app-routes";
+import {  User, Settings, LogOut } from "lucide-react";
 import { ComponentType } from "react";
 
 export type SettingItem = {
@@ -10,17 +11,17 @@ export type SettingItem = {
 export const settingItems: SettingItem[] = [
   {
     label: "پروفایل",
-    href: "/profile",
+    href: APP_ROUTES.user("user-id"),
     icon: User,
   },
   {
     label: "تنظیمات",
-    href: "/setting",
+    href: APP_ROUTES.preferences(),
     icon: Settings,
   },
   {
     label: "خروج",
-    href: "/authentication",
+    href: APP_ROUTES.root(),
     icon: LogOut,
   },
 ];

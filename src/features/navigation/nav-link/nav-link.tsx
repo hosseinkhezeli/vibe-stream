@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { clsx } from "clsx";
-import type { NavItem } from "./nav-items";
+import type { NavItem } from "../navigation";
 
 type NavLinkProps = {
   item: NavItem;
@@ -20,14 +20,17 @@ export function NavLink({ item, collapsed }: NavLinkProps) {
     <Link
       href={item.href}
       className={clsx(
-        "flex flex-col md:flex-row items-center justify-center md:justify-start py-4 md:py-2 gap-2 md:gap-3 rounded-md text-sm font-medium transition-colors",
+        "flex flex-col md:flex-row items-center justify-center md:justify-start py-4 md:py-2 gap-2 md:gap-3 rounded-md text-sm font-medium transition-colors overflow-hidden",
         "hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60",
-        "px-4 py-2",
-        isActive ? "bg-white/10 text-white" : "text-muted"
+        "px-4 py-2"
       )}
     >
-      <Icon size={22} className={clsx("shrink-0", isActive ? "text-accent" : "text-muted")} />
-      <div className={clsx(collapsed ? "w-0" : "w-full", "transition-[width]")}>
+      <Icon
+        size={22}
+        strokeWidth={1.5}
+        className={clsx("shrink-0", isActive ? "text-white fill-muted/50" : "text-muted")}
+      />
+      <div className={clsx(collapsed ? "w-0" : "w-max", "transition-[width]")}>
         <span className={clsx("truncate", collapsed ? "hidden" : "block")}>{item.label}</span>
       </div>
     </Link>

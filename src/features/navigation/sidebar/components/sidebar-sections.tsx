@@ -1,6 +1,6 @@
 "use client";
-import { primaryNav } from "../../nav/nav-items";
-import { NavLink } from "../../nav/nav-link";
+import { NavLink } from "../../nav-link/nav-link";
+import { primaryNav } from "../../navigation";
 
 type Props = {
   collapsed: boolean;

@@ -6,8 +6,8 @@ import clsx from "clsx";
 import { XIcon } from "lucide-react";
 import { useRef } from "react";
 import { useQueryState } from "nuqs";
-import { settingItems } from "../setting-list/setting-items";
 import { SettingLink } from "../setting-list/setting-link";
+import { settingItems } from "../setting";
 
 export function SettingDrawer() {
   const [view, setView] = useQueryState("view");
@@ -50,7 +50,7 @@ export function SettingDrawer() {
       <div className="flex-1 pt-10 h-full grow overflow-y-auto px-8 pb-4 ">
         <nav aria-label="Primary navigation" className="mb-4">
           <ul className="flex flex-col gap-4">
-            {settingItems.map((item, idx) => (
+            {settingItems.map((item) => (
               <li key={item.href}>
                 <SettingLink item={item} />
               </li>

@@ -22,11 +22,7 @@ export function PlaylistRow({ title, subtitle, items }: PlaylistRowProps) {
           <h2 className="text-lg md:text-2xl font-semibold text-start hover:underline cursor-pointer">
             {title}
           </h2>
-          {subtitle && (
-            <p className="mt-1 text-xs md:text-sm text-muted text-start">
-              {subtitle}
-            </p>
-          )}
+          {subtitle && <p className="mt-1 text-xs md:text-sm text-muted text-start">{subtitle}</p>}
         </div>
         <button
           type="button"
@@ -66,9 +62,7 @@ export function PlaylistRow({ title, subtitle, items }: PlaylistRowProps) {
               <h3 className="text-sm md:text-base font-semibold mb-1 truncate text-start">
                 {item.title}
               </h3>
-              <p className="text-xs text-muted line-clamp-2 text-start">
-                {item.description}
-              </p>
+              <p className="text-xs text-muted line-clamp-2 text-start">{item.description}</p>
             </article>
           ))}
         </div>
